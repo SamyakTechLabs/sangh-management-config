@@ -1,8 +1,12 @@
-# eureka:
-#   instance:
-#     prefer-ip-address: true
-#   client:
-#     fetch-registry: true
-#     register-with-eureka: true
-#     service-url:
-#       defaultZone: http://config-server:9296
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: ${EUREKA_SERVER_ADDRESS:http://localhost:8761/eureka}
+
+testing:
+  property:
+    value: reading from git application-sandbox.yaml
