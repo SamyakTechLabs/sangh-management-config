@@ -9,4 +9,4 @@ eureka:
 
 testing:
   property:
-    value: reading from git api-gateway/api-gateway-sandbox.yaml
+    value: reading from git sandbox branch api-gateway/api-gateway-sandbox.yaml

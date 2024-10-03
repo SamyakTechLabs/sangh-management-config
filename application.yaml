@@ -9,4 +9,4 @@ eureka:
 
 testing:
   property:
-    value: reading from git application.yaml
+    value: reading from git sandbox branch application.yaml
