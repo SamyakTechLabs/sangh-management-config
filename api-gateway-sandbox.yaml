@@ -7,6 +7,6 @@ eureka:
     service-url:
       defaultZone: ${EUREKA_SERVER_ADDRESS:http://localhost:8761/eureka}
 
-testing:
-  property:
-    value: reading from git api-gateway-sandbox.yaml
+api-config:
+  reader:
+    location: reading from git api-gateway-sandbox.yaml
