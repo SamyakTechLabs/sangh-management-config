@@ -1,0 +1,61 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: ${SPRING_APPLICATION_NAME:ORGANIZATION-SERVICE}
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    driver-class-name: ${SPRING_DATASOURCE_DRIVER_CLASS_NAME}
+    type: org.apache.commons.dbcp2.BasicDataSource
+    dbcp2:
+      initial-size: 5
+      max-total: 10
+      max-idle: 5
+      min-idle: 2
+      validation-query: SELECT 1
+      test-on-borrow: true
+
+  jpa:
+    hibernate:
+      ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO}
+    show-sql: ${SPRING_JPA_SHOW_SQL}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ${MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE:health,info,metrics}
+  endpoint:
+    health:
+      show-details: always
+    metrics:
+      enabled: ${MANAGEMENT_ENDPOINT_METRICS_ENABLED:true}
+    tags:
+      datasource: ${MANAGEMENT_ENDPOINT_TAGS_DATASOURCE:*}
+
+springdoc:
+  api-docs:
+    path: ${SPRINGDOC_API_DOCS_PATH}
+  swagger-ui:
+    path: ${SPRINGDOC_SWAGGER_UI_PATH}
+    operationsSorter: ${SPRINGDOC_SWAGGER_UI_OPERATIONS_SORTER}
+    tagsSorter: ${SPRINGDOC_SWAGGER_UI_TAGS_SORTER}
+
+jwt:
+  secret:
+    key: ${JWT_SECRET_KEY}
+  expiration:
+    time: ${JWT_EXPIRATION_TIME}
+
+amazon:
+  aws:
+    access-key: ${AMAZON_AWS_ACCESS_KEY}
+    secret-key: ${AMAZON_AWS_SECRET_KEY}
+    region: ${AMAZON_AWS_REGION}
+
+aws:
+  s3:
+    bucket: ${AWS_S3_BUCKET}
