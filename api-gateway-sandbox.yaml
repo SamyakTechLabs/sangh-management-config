@@ -37,7 +37,7 @@ spring:
 
 user:
   service:
-    url: http://user-service:8081
+    url: http://user-service.test.svc.cluster.local
 
 organization:
   service:
