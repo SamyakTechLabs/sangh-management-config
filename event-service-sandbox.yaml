@@ -59,3 +59,10 @@ amazon:
 aws:
   s3:
     bucket: ${AWS_S3_BUCKET}
+
+
+organization:
+  service:
+    url: http://localhost:8082
+    endpoint:
+      getById: /api/v1/organization/{id}
