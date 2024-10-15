@@ -44,6 +44,13 @@ springdoc:
     operationsSorter: ${SPRINGDOC_SWAGGER_UI_OPERATIONS_SORTER}
     tagsSorter: ${SPRINGDOC_SWAGGER_UI_TAGS_SORTER}
 
+openapi:
+  servers:
+    - url: "http://localhost:9090"
+      description: "API Gateway Server"
+    - url: "http://localhost:8081"
+      description: "LOCAL ENV"
+
 jwt:
   secret:
     key: ${JWT_SECRET_KEY}
