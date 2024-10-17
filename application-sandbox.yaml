@@ -92,4 +92,4 @@ management:
       
 api-config:
   reader:
-    location: reading from git sandbox branch api-gateway-application-sandbox.yaml
+    location: reading from git sandbox branch application-sandbox.yaml
