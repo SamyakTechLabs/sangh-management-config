@@ -90,6 +90,6 @@ management:
     tags:
       datasource: ${MANAGEMENT_ENDPOINT_TAGS_DATASOURCE}
       
-testing:
-  property:
-    value: reading from git sandbox branch api-gateway-application-local.yaml
+api-config:
+  reader:
+    lcoation: reading from git local branch api-gateway-local.yaml
