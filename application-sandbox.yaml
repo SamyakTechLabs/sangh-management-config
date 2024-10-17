@@ -1,0 +1,95 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: API-GATEWAY
+  cloud:
+    gateway:
+      routes:
+        - id: USER-SERVICE
+          uri: ${user.service.url}
+          predicates:
+            - Path=/api/v1/auth/**, /api/v1/user/**, /api/v1/user-family-relation/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: USER-SERVICE
+                fallbackUri: forward:/userServiceFallBack
+        - id: ORGANIZATION-SERVICE
+          uri: ${organization.service.url}
+          predicates:
+            - Path=/api/v1/organization/**, /api/v1/organizations/**, /api/v1/member-type/**, /api/v1/membership/**, /api/v1/business-hour-type/**, /api/v1/business-hour/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: ORGANIZATION-SERVICE
+                fallbackUri: forward:/organizationServiceFallBack
+        - id: EVENT-SERVICE
+          uri: ${event.service.url}
+          predicates:
+            - Path=/api/v1/event-type**, /api/v1/event/**, /api/v1/events/**, /api/v1/rsvp/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: EVENT-SERVICE
+                fallbackUri: forward:/eventServiceFallBack
+
+user:
+  service:
+    url: http://user-service:8081
+
+organization:
+  service:
+    url: http://localhost:8082
+
+event:
+  service:
+    url: http://localhost:8083
+
+jwt:
+  secret:
+    key: ${JWT_SECRET_KEY}
+  expiration:
+    time: ${JWT_EXPIRATION_TIME}
+
+springdoc:
+  enable-native-support: true
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui/index.html
+    config-url: /v3/api-docs/swagger-config
+    operationsSorter: alpha
+    tagsSorter: alpha
+    urls:
+      - url: /v3/api-docs
+        name: API Gateway Service
+        primaryName: API Gateway Service
+      - url: /user-service/v3/api-docs
+        name: User Service
+        primaryName: User Service
+      - url: /organization-service/v3/api-docs
+        name: Organization Service
+        primaryName: Organization Service
+      - url: /event-service/v3/api-docs
+        name: Event Service
+        primaryName: Event Service
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ${MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE}
+  endpoint:
+    health:
+      show-details: always
+    metrics:
+      enabled: ${MANAGEMENT_ENDPOINT_METRICS_ENABLED}
+    tags:
+      datasource: ${MANAGEMENT_ENDPOINT_TAGS_DATASOURCE}
+      
+api-config:
+  reader:
+    location: reading from git sandbox branch api-gateway-application-sandbox.yaml
