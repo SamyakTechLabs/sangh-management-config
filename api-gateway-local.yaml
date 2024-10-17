@@ -92,4 +92,4 @@ management:
       
 api-config:
   reader:
-    lcoation: reading from git local branch api-gateway-local.yaml
+    location: reading from git local branch api-gateway-local.yaml
