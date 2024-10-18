@@ -2,37 +2,35 @@ server:
   port: 9090
 
 spring:
-  application:
-    name: API-GATEWAY
   cloud:
     gateway:
       routes:
-        - id: USER-SERVICE
+        - id: user-service
           uri: ${user.service.url}
           predicates:
             - Path=/api/v1/auth/**, /api/v1/user/**, /api/v1/user-family-relation/**
           filters:
             - name: CircuitBreaker
               args:
-                name: USER-SERVICE
+                name: user-service
                 fallbackUri: forward:/userServiceFallBack
-        - id: ORGANIZATION-SERVICE
+        - id: organization-service
           uri: ${organization.service.url}
           predicates:
             - Path=/api/v1/organization/**, /api/v1/organizations/**, /api/v1/member-type/**, /api/v1/membership/**, /api/v1/business-hour-type/**, /api/v1/business-hour/**
           filters:
             - name: CircuitBreaker
               args:
-                name: ORGANIZATION-SERVICE
+                name: organization-service
                 fallbackUri: forward:/organizationServiceFallBack
-        - id: EVENT-SERVICE
+        - id: event-service
           uri: ${event.service.url}
           predicates:
             - Path=/api/v1/event-type**, /api/v1/event/**, /api/v1/events/**, /api/v1/rsvp/**
           filters:
             - name: CircuitBreaker
               args:
-                name: EVENT-SERVICE
+                name: event-service
                 fallbackUri: forward:/eventServiceFallBack
 
 user:
