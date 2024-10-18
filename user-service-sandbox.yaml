@@ -2,8 +2,6 @@ server:
   port: 8081
 
 spring:
-  application:
-    name: ${SPRING_APPLICATION_NAME:USER-SERVICE}
   datasource:
     url: ${SPRING_DATASOURCE_URL}
     username: ${SPRING_DATASOURCE_USERNAME}
