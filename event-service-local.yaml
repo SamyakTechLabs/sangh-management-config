@@ -2,8 +2,6 @@ server:
   port: 8083
 
 spring:
-  application:
-    name: ${SPRING_APPLICATION_NAME:EVENT-SERVICE}
   datasource:
     url: ${SPRING_DATASOURCE_URL}
     username: ${SPRING_DATASOURCE_USERNAME}
