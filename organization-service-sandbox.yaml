@@ -44,6 +44,8 @@ springdoc:
 
 openapi:
   servers:
+    - url: "http://k8s-test-apigatew-96bb955c58-1175381185.ap-south-1.elb.amazonaws.com"
+      description: "Load Balancer DNS"
     - url: "http://localhost:9090"
       description: "API Gateway Server"
     - url: "http://localhost:8082"
