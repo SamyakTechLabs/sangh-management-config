@@ -39,11 +39,11 @@ user:
 
 organization:
   service:
-    url: http://localhost:8082
+    url: http://organization-service:8082
 
 event:
   service:
-    url: http://localhost:8083
+    url: http://event-service:8083
 
 jwt:
   secret:
