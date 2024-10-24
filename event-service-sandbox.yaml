@@ -44,10 +44,8 @@ springdoc:
 
 openapi:
   servers:
-    - url: "http://localhost:9090"
-      description: "API Gateway Server"
-    - url: "http://localhost:8082"
-      description: "Local ENV"
+    - url: "https://sandbox.api.sm.samyaktechlabs.com/swagger-ui/index.html"
+      description: "Sub Domain"
 
 jwt:
   secret:
