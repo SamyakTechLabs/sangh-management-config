@@ -62,3 +62,7 @@ amazon:
       secret-key: ${AMAZON_AWS_S3_SECRET_KEY}
       region: ${AMAZON_AWS_S3_REGION}
       bucket: ${AMAZON_AWS_S3_BUCKET}
+
+event:
+  service:
+    url: http://localhost:8083
