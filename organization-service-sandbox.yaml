@@ -52,13 +52,15 @@ jwt:
     key: ${JWT_SECRET_KEY}
   expiration:
     time: ${JWT_EXPIRATION_TIME}
-
+    
 amazon:
   aws:
-    access-key: ${AMAZON_AWS_ACCESS_KEY}
-    secret-key: ${AMAZON_AWS_SECRET_KEY}
-    region: ${AMAZON_AWS_REGION}
-
-aws:
-  s3:
-    bucket: ${AWS_S3_BUCKET}
+    s3:
+      access-key: ${AMAZON_AWS_S3_ACCESS_KEY}
+      secret-key: ${AMAZON_AWS_S3_SECRET_KEY}
+      region: ${AMAZON_AWS_S3_REGION}
+      bucket: ${AMAZON_AWS_S3_BUCKET}
+      
+event:
+  service:
+    url: http://organization-service:8083
