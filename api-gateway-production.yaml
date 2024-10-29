@@ -90,4 +90,4 @@ management:
       
 api-config:
   reader:
-    location: reading from git sandbox branch api-gateway-production.yaml
+    location: reading from git production branch api-gateway-production.yaml
