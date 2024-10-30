@@ -44,7 +44,7 @@ springdoc:
 
 openapi:
   servers:
-    - url: "https://sandbox.api.sm.samyaktechlabs.com/swagger-ui/index.html"
+    - url: "https://sandbox.api.sm.samyaktechlabs.com"
       description: "Sub Domain"
 
 jwt:
