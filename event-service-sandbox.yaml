@@ -64,6 +64,6 @@ amazon:
 
 organization:
   service:
-    url: http://event-service:8082
+    url: http://organization-service:8082
     endpoint:
       getById: /api/v1/organization/{id}
