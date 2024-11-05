@@ -63,4 +63,4 @@ amazon:
       
 event:
   service:
-    url: http://organization-service:8083
+    url: http://event-service:8083
