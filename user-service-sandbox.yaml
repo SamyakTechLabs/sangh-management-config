@@ -66,3 +66,7 @@ amazon:
       secret-key: ${AMAZON_AWS_SES_SECRET_KEY}
    
 
+organization-service:
+  url: http://organization-service:8082
+  membership:
+    endpoint: /api/v1/membership
