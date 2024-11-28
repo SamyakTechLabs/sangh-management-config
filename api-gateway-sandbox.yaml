@@ -33,7 +33,6 @@ spring:
                 name: event-service
                 fallbackUri: forward:/eventServiceFallBack
 
-
 user:
   service:
     url: http://user-service:8081
