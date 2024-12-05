@@ -75,3 +75,6 @@ organization-service:
   url: http://localhost:8082
   membership:
     endpoint: /api/v1/membership
+
+test:
+  property: Testing for refresh scope
