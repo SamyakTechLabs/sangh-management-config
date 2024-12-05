@@ -25,14 +25,14 @@ management:
   endpoints:
     web:
       exposure:
-        include: ${MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE:health,info,metrics}
+        include: ${MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE}
   endpoint:
     health:
       show-details: always
     metrics:
-      enabled: ${MANAGEMENT_ENDPOINT_METRICS_ENABLED:true}
+      enabled: ${MANAGEMENT_ENDPOINT_METRICS_ENABLED}
     tags:
-      datasource: ${MANAGEMENT_ENDPOINT_TAGS_DATASOURCE:*}
+      datasource: ${MANAGEMENT_ENDPOINT_TAGS_DATASOURCE}
 
 springdoc:
   api-docs:
@@ -77,4 +77,4 @@ organization-service:
     endpoint: /api/v1/membership
 
 test:
-  property: Refresh scope test with new configuration value 
+  property: new configuration value 
