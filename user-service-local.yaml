@@ -77,4 +77,4 @@ organization-service:
     endpoint: /api/v1/membership
 
 test:
-  property: Testing for refresh scope
+  property: Refresh scope test with new configuration value 
