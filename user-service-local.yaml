@@ -77,4 +77,4 @@ organization-service:
     endpoint: /api/v1/membership
 
 test:
-  property: added default application name in user service application-local.yaml file
+  property: test for confirmation
