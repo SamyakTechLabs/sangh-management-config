@@ -77,4 +77,4 @@ organization-service:
     endpoint: /api/v1/membership
 
 test:
-  property: test for confirmation
+  property: added refresh rate in user service
