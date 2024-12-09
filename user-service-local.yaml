@@ -77,4 +77,4 @@ organization-service:
     endpoint: /api/v1/membership
 
 test:
-  property: removed actuator dependency from config server
+  property: test for confirmation
