@@ -77,4 +77,4 @@ organization-service:
     endpoint: /api/v1/membership
 
 test:
-  property: removed default app name from user local yaml file and removed refresh rate value
+  property: added default application name in user service application-local.yaml file
