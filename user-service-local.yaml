@@ -77,4 +77,4 @@ organization-service:
     endpoint: /api/v1/membership
 
 test:
-  property: changed refresh rate to 10 sec in config server
+  property: test for confirmation
