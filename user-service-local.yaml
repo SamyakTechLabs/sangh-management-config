@@ -77,4 +77,4 @@ organization-service:
     endpoint: /api/v1/membership
 
 test:
-  property: new configuration after changing config default-label value main to local
+  property: added value for refresh rate
