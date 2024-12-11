@@ -76,5 +76,3 @@ organization-service:
   membership:
     endpoint: /api/v1/membership
 
-test:
-  property: test confirmation
