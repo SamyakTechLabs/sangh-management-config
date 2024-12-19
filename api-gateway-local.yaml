@@ -9,6 +9,7 @@ spring:
           uri: ${user.service.url}
           predicates:
             - Path=/api/v1/auth/**, /api/v1/user/**, /api/v1/user-family-relation/**, /api/v1/user-device/**, /api/v1/notification/**
+            - Method=GET,POST,PUT,DELETE
           filters:
             - name: CircuitBreaker
               args:
