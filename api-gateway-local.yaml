@@ -4,8 +4,6 @@ server:
 spring:
   cloud:
     gateway:
-      default-filters:
-        - RemoveResponseHeader=Transfer-Encoding
       routes:
         - id: user-service
           uri: ${user.service.url}
@@ -16,7 +14,6 @@ spring:
               args:
                 name: user-service
                 fallbackUri: forward:/userServiceFallBack
-            - RemoveResponseHeader=Transfer-Encoding
         - id: organization-service
           uri: ${organization.service.url}
           predicates:
