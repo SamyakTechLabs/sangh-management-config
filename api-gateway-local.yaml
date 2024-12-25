@@ -8,7 +8,7 @@ spring:
         - id: user-service
           uri: ${user.service.url}
           predicates:
-            - Path=/api/v1/auth/**, /api/v1/user/**, /api/v1/users/** /api/v1/user-family-relation/**, /api/v1/user-device/**, /api/v1/notification/**
+            - Path=/api/v1/auth/**, /api/v1/user/**, /api/v1/users/**, /api/v1/user-family-relation/**, /api/v1/user-device/**, /api/v1/notification/**
           filters:
             - name: CircuitBreaker
               args:
