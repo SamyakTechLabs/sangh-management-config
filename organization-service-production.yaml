@@ -44,7 +44,7 @@ springdoc:
 
 openapi:
   servers:
-    - url: "https://sandbox.api.sm.samyaktechlabs.com/swagger-ui/index.html"
+    - url: "https://sandbox.api.sm.samyaktechlabs.com"
       description: "Sub Domain"
 
 jwt:
@@ -63,4 +63,4 @@ amazon:
       
 event:
   service:
-    url: http://organization-service:8083
+    url: http://event-service:8083
