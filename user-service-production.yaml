@@ -44,7 +44,7 @@ springdoc:
 
 openapi:
   servers:
-    - url: "https://sandbox.api.sm.samyaktechlabs.com/swagger-ui/index.html"
+    - url: "https://sandbox.api.sm.samyaktechlabs.com"
       description: "Sub Domain"
 
 jwt:
@@ -65,3 +65,7 @@ amazon:
       access-key: ${AMAZON_AWS_SES_ACCESS_KEY}
       secret-key: ${AMAZON_AWS_SES_SECRET_KEY}
    
+organization-service:
+  url: http://organization-service:8082
+  membership:
+    endpoint: /api/v1/membership
