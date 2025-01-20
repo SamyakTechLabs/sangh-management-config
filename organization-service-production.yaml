@@ -44,7 +44,7 @@ springdoc:
 
 openapi:
   servers:
-    - url: "http://k8s-prod-apigatew-454acc82f3-489526122.ap-south-1.elb.amazonaws.com"
+    - url: "https://prod.api.sm.samyaktechlabs.com"
       description: "Sub Domain"
 
 jwt:
